@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevQuest - Master Modern Tech Skills</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#97ca3f",
+                "background-light": "#f7f8f6",
+                "background-dark": "#121f3d",
+                "navy-accent": "#1e2d52",
+              },
+              fontFamily: {
+                "display": ["Lexend", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(151, 202, 63, 0.15);
+        }
+        .neon-glow:hover {
+            box-shadow: 0 0 25px rgba(151, 202, 63, 0.3);
+        }
+        .card-gradient {
+            background: linear-gradient(135deg, #1e2d52 0%, #121f3d 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 border-b border-slate-800 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+<span class="text-xl font-bold tracking-tight text-white">DevQuest</span>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Courses</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Learning Paths</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Enterprise</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Community</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="bg-navy-accent border-none rounded-lg pl-10 pr-4 py-1.5 text-sm focus:ring-1 focus:ring-primary w-64 text-white placeholder-slate-400" placeholder="Search courses..." type="text"/>
+</div>
+<button class="text-sm font-semibold px-4 py-2 hover:text-primary transition-colors">Log In</button>
+<button class="bg-primary text-background-dark font-bold text-sm px-5 py-2 rounded-lg hover:brightness-110 transition-all">Sign Up</button>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1 mb-6">
+<span class="material-symbols-outlined text-primary text-sm">rocket_launch</span>
+<span class="text-primary text-xs font-bold uppercase tracking-wider">New: AI Engineering Path</span>
+</div>
+<h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-white mb-6">
+                            Master the skills that <span class="text-primary">define the future</span>
+</h1>
+<p class="text-lg text-slate-300 mb-8 max-w-xl">
+                            Join 2M+ students learning code, design, and business from top industry experts. Hands-on projects, real certifications, and a community that never stops growing.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-background-dark font-bold px-8 py-4 rounded-xl hover:scale-105 transition-transform">Start Learning Now</button>
+<button class="bg-navy-accent border border-slate-700 text-white font-bold px-8 py-4 rounded-xl hover:bg-slate-800 transition-colors">Explore Paths</button>
+</div>
+</div>
+<div class="relative">
+<div class="w-full aspect-video rounded-2xl overflow-hidden border border-slate-700 shadow-2xl relative group">
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors z-10"></div>
+<img class="w-full h-full object-cover" data-alt="Modern tech workspace with multiple monitors showing code" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKQFmcCmybRY2fq1cGQRRkqneh8uOT9R3ERSjARftrxB5tqqjm5NMW_NTZ0ArXIw0lzQiiwz6Ln2oycgjIMdSGE_nRo_3B-dA7J1Jy3_lFnkei0PFnOz_7U6RSNsHCS72OkkP1Z9Za1mVcBv7Dmh14YoAHRPcVzCW61DGJt15l_HDmrich27gr-dG12BJAT__qwcrSAQmRx1Zr7pvV6YyEysu9OjgCHRIcaOB6XIIvrc7Ufu9csyauevIdCswV0A_Ce8K341GtF9g"/>
+<div class="absolute inset-0 flex items-center justify-center z-20">
+<button class="size-20 bg-primary rounded-full flex items-center justify-center text-background-dark hover:scale-110 transition-transform shadow-lg">
+<span class="material-symbols-outlined text-4xl fill-1">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-navy-accent p-4 rounded-xl border border-slate-700 shadow-xl hidden md:block">
+<div class="flex items-center gap-3">
+<div class="flex -space-x-2">
+<div class="size-8 rounded-full border-2 border-navy-accent bg-slate-500"></div>
+<div class="size-8 rounded-full border-2 border-navy-accent bg-slate-400"></div>
+<div class="size-8 rounded-full border-2 border-navy-accent bg-slate-300"></div>
+</div>
+<span class="text-xs font-medium text-slate-200">50k+ students online</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]"></div>
+</section>
+<!-- Featured Courses -->
+<section class="py-20 bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-3xl font-bold text-white mb-2">Popular Courses</h2>
+<p class="text-slate-400">Hand-picked by our curators for the highest impact.</p>
+</div>
+<a class="text-primary font-semibold flex items-center gap-2 hover:underline" href="#">
+                        View all 800+ courses <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Course Card 1 -->
+<div class="card-gradient rounded-xl overflow-hidden border border-slate-800 neon-glow transition-all group cursor-pointer">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="React JS logo on a dark digital background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWXTDEOUVj1cbdodTYGydFX8B0yd1VqbSYy_pJh045XsRuhK5h-jndXc8Se8K_aPe9dG3bich66ueRzJHvmqKCI4TTIVObvLxl65jnL3xKNprv02r6VFWY2IgqoFCMmnW8u-L0Me-40uQL3J4wjpQhGpxyQ1S2dxtO2dYlGY-a09EIHBWs3bdQtsoNufP0Ma-qQ_9OTOtKXZZbjFfIOoxsHM7UUY7ziC9EctkacT0725zNmVhNrRv2ztIWlyWrFHNPl7pLd_e1DkM"/>
+<div class="absolute top-2 right-2 bg-background-dark/80 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-primary uppercase">Expert</div>
+</div>
+<div class="p-5">
+<p class="text-xs font-bold text-primary mb-2 uppercase tracking-tighter">Web Development</p>
+<h3 class="text-white font-bold text-lg mb-2 leading-snug">Professional React 18 &amp; Next.js</h3>
+<div class="flex items-center gap-2 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                                24 hours
+                                <span class="mx-1">•</span>
+<span class="material-symbols-outlined text-sm">group</span>
+                                12.5k students
+                            </div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="card-gradient rounded-xl overflow-hidden border border-slate-800 neon-glow transition-all group cursor-pointer">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Abstract Python programming language symbols" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyC8YaLsA7AM9IPhH1QP6IKATBkesHoQtrMRGnrns1KTT5KeqLR_cYd_s37r60RF9VrYjZf_jWn52TKg1P3gp_qP5RM6DN9uXVfqtyIKANOEua2gDhi6UvuQcllKv9kfr166ZDGfMJpqakAB3vuBTZxc3gRsvNSMfh9kM5VKiGvuSny2VwtMh_KKIcQHLxtiBntA8AYc8UWrNYdVbEnwbW_fU0F0wj2InTxHBWNel_7U2KdEOqWwfTLo7KjkvYswH9WwtpRPxxYRc"/>
+<div class="absolute top-2 right-2 bg-background-dark/80 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-blue-400 uppercase">Beginner</div>
+</div>
+<div class="p-5">
+<p class="text-xs font-bold text-primary mb-2 uppercase tracking-tighter">Data Science</p>
+<h3 class="text-white font-bold text-lg mb-2 leading-snug">Python for Data Engineering</h3>
+<div class="flex items-center gap-2 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                                32 hours
+                                <span class="mx-1">•</span>
+<span class="material-symbols-outlined text-sm">group</span>
+                                8.2k students
+                            </div>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="card-gradient rounded-xl overflow-hidden border border-slate-800 neon-glow transition-all group cursor-pointer">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Clean UI/UX design workflow on a tablet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxd-PmBvsps9mvqB4JmUfJ6K894J_9Aaj14Qt64HBv_U_mAa2qLf6yaJasw8v4vroh8hkjifG-A1TGiLBP3bs3jsrXZMwYhQjd4X2x3buJ6w4vwr25RY3no7ENmHr7rf0SiOF4gdaZ7-4h-cUTqobMk1CYL1Vi021gozu6xRqVwch4G-4ml0d2UyNDmYeS67M6fUDBMUKRstoz5UBaNsLlR8wxC4CBFEkct2a7x6QBzGlwTJkIPHg5PSCjqb-FnHJXmQ--BfLhtsU"/>
+<div class="absolute top-2 right-2 bg-background-dark/80 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-yellow-400 uppercase">Intermediate</div>
+</div>
+<div class="p-5">
+<p class="text-xs font-bold text-primary mb-2 uppercase tracking-tighter">Design</p>
+<h3 class="text-white font-bold text-lg mb-2 leading-snug">Advanced UI/UX Systems</h3>
+<div class="flex items-center gap-2 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                                18 hours
+                                <span class="mx-1">•</span>
+<span class="material-symbols-outlined text-sm">group</span>
+                                4.1k students
+                            </div>
+</div>
+</div>
+<!-- Course Card 4 -->
+<div class="card-gradient rounded-xl overflow-hidden border border-slate-800 neon-glow transition-all group cursor-pointer">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Server racks with glowing green lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-wJDNHhqzLrX86_A3adSHNm1DLBvaz5Dsit5Cvk_99W3mzyhN9dlOuRSRHoxHg87EWieyIYcnxlDmpgh6E9Ajdo9KGSYNm-x9oK6XeUwMh7srN6NQhubtMavHdiCQW1OhjZd8iStOGwQ1KN3IezgB5qmji7BFqJCdbq-E9LFOhRGYeVOQJAkMLnH1jEYgQdU9aBJoLwnNzMXhDa-mRJAY0n0UdUxs4bwWo3zSmwdl0cKMSqoacQmF9ALSBI0yvp0-9N2Xa4ujZog"/>
+<div class="absolute top-2 right-2 bg-background-dark/80 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-primary uppercase">Expert</div>
+</div>
+<div class="p-5">
+<p class="text-xs font-bold text-primary mb-2 uppercase tracking-tighter">DevOps</p>
+<h3 class="text-white font-bold text-lg mb-2 leading-snug">Kubernetes in Production</h3>
+<div class="flex items-center gap-2 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                                40 hours
+                                <span class="mx-1">•</span>
+<span class="material-symbols-outlined text-sm">group</span>
+                                2.9k students
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Learning Paths -->
+<section class="py-20 border-y border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Master Your Career Path</h2>
+<p class="text-slate-400 max-w-2xl mx-auto">Structured curriculum designed to take you from zero to job-ready in months, not years.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-navy-accent/40 p-8 rounded-2xl border border-slate-700 hover:border-primary/50 transition-colors">
+<div class="size-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">code</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-4">Frontend Engineer</h3>
+<p class="text-slate-400 text-sm mb-6 leading-relaxed">Master HTML, CSS, JS, and React. Build responsive apps and secure your first role as a UI specialist.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-xs text-slate-300">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                12 Specialized Courses
+                            </li>
+<li class="flex items-center gap-3 text-xs text-slate-300">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                4 Portfolio Projects
+                            </li>
+</ul>
+<button class="w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-background-dark transition-all">Start Path</button>
+</div>
+<div class="bg-navy-accent/40 p-8 rounded-2xl border border-primary shadow-[0_0_30px_rgba(151,202,63,0.1)] relative overflow-hidden">
+<div class="absolute top-4 right-4 bg-primary text-background-dark text-[10px] font-black px-2 py-1 rounded">HOT</div>
+<div class="size-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-4">AI Developer</h3>
+<p class="text-slate-400 text-sm mb-6 leading-relaxed">Learn LLMs, Prompt Engineering, and PyTorch. Build the next generation of intelligent software.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-xs text-slate-300">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                15 Specialized Courses
+                            </li>
+<li class="flex items-center gap-3 text-xs text-slate-300">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                6 AI Projects
+                            </li>
+</ul>
+<button class="w-full py-3 rounded-lg bg-primary text-background-dark font-bold hover:brightness-110 transition-all">Start Path</button>
+</div>
+<div class="bg-navy-accent/40 p-8 rounded-2xl border border-slate-700 hover:border-primary/50 transition-colors">
+<div class="size-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">monitoring</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-4">Growth Marketer</h3>
+<p class="text-slate-400 text-sm mb-6 leading-relaxed">From SEO basics to advanced data analytics. Master the tools that drive modern business growth.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-xs text-slate-300">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                10 Specialized Courses
+                            </li>
+<li class="flex items-center gap-3 text-xs text-slate-300">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                Internship Ready Projects
+                            </li>
+</ul>
+<button class="w-full py-3 rounded-lg border border-primary text-primary font-bold hover:bg-primary hover:text-background-dark transition-all">Start Path</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-20 bg-background-dark/50 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<div class="lg:w-1/3">
+<h2 class="text-4xl font-bold text-white mb-6">Real results from real students.</h2>
+<p class="text-slate-400 mb-8">DevQuest has helped thousands of students transition into high-paying tech roles worldwide.</p>
+<div class="flex items-center gap-4">
+<div class="size-12 bg-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-background-dark">format_quote</span>
+</div>
+<span class="text-sm font-bold text-white italic">"Join the community that grows together."</span>
+</div>
+</div>
+<div class="lg:w-2/3 grid sm:grid-cols-2 gap-6">
+<div class="bg-navy-accent p-6 rounded-2xl border border-slate-800">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-12 rounded-full bg-slate-700"></div>
+<div>
+<h4 class="text-white font-bold">Sarah Chen</h4>
+<p class="text-primary text-xs">Software Engineer @ Netflix</p>
+</div>
+</div>
+<p class="text-slate-300 text-sm italic leading-relaxed">"DevQuest wasn't just about the content; it was about the structure. I went from zero coding knowledge to a junior role in 8 months."</p>
+</div>
+<div class="bg-navy-accent p-6 rounded-2xl border border-slate-800 mt-6 lg:mt-12">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-12 rounded-full bg-slate-600"></div>
+<div>
+<h4 class="text-white font-bold">Marcus Thorne</h4>
+<p class="text-primary text-xs">UX Designer @ Stripe</p>
+</div>
+</div>
+<p class="text-slate-300 text-sm italic leading-relaxed">"The Design System path is world-class. It taught me things that years of agency work hadn't. Highly recommended!"</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-white mb-4">Choose your learning speed</h2>
+<p class="text-slate-400">Unlock your full potential with an expert-led plan.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+<!-- Basic -->
+<div class="bg-navy-accent/30 p-8 rounded-2xl border border-slate-800 flex flex-col h-full">
+<div class="mb-8">
+<h3 class="text-white font-bold text-xl mb-2">Free</h3>
+<p class="text-slate-400 text-sm">Kickstart your journey</p>
+</div>
+<div class="mb-8">
+<span class="text-4xl font-bold text-white">$0</span>
+<span class="text-slate-400">/mo</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                5 introductory courses
+                            </li>
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                Community access
+                            </li>
+<li class="flex items-center gap-3 text-sm text-slate-500 line-through">
+                                Certifications
+                            </li>
+</ul>
+<button class="w-full py-4 rounded-xl border border-slate-700 text-white font-bold hover:bg-slate-800 transition-colors">Start for free</button>
+</div>
+<!-- Pro -->
+<div class="bg-navy-accent p-8 rounded-2xl border-2 border-primary shadow-[0_0_40px_rgba(151,202,63,0.15)] flex flex-col h-full relative scale-105">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary px-4 py-1 rounded-full text-background-dark text-[10px] font-black uppercase tracking-widest">Most Popular</div>
+<div class="mb-8">
+<h3 class="text-white font-bold text-xl mb-2">Expert Plus</h3>
+<p class="text-slate-400 text-sm">Everything you need to get hired</p>
+</div>
+<div class="mb-8">
+<span class="text-4xl font-bold text-white">$19</span>
+<span class="text-slate-400">/mo</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                800+ Professional Courses
+                            </li>
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                Official Certifications
+                            </li>
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                Learning Paths
+                            </li>
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                Offline viewing (Mobile)
+                            </li>
+</ul>
+<button class="w-full py-4 rounded-xl bg-primary text-background-dark font-black hover:brightness-110 shadow-lg shadow-primary/20 transition-all">Go Expert Plus</button>
+</div>
+<!-- Business -->
+<div class="bg-navy-accent/30 p-8 rounded-2xl border border-slate-800 flex flex-col h-full">
+<div class="mb-8">
+<h3 class="text-white font-bold text-xl mb-2">Team</h3>
+<p class="text-slate-400 text-sm">Scale your engineering team</p>
+</div>
+<div class="mb-8">
+<span class="text-4xl font-bold text-white">$49</span>
+<span class="text-slate-400">/mo per user</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                Team Analytics Dashboard
+                            </li>
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                Custom Learning Paths
+                            </li>
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                Priority Support
+                            </li>
+</ul>
+<button class="w-full py-4 rounded-xl border border-slate-700 text-white font-bold hover:bg-slate-800 transition-colors">Contact Sales</button>
+</div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] -z-10"></div>
+</section>
+<!-- CTA Section -->
+<section class="py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gradient-to-r from-navy-accent to-background-dark p-12 rounded-[2rem] border border-slate-800 text-center relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to start your quest?</h2>
+<p class="text-slate-400 text-lg mb-10 max-w-xl mx-auto">Join the 100,000+ new students starting their tech careers this month.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-background-dark font-black px-10 py-4 rounded-xl text-lg hover:scale-105 transition-transform">Create Your Account</button>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="absolute bottom-0 left-0 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-dark border-t border-slate-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-16">
+<div class="col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+<span class="text-xl font-bold tracking-tight text-white">DevQuest</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">Empowering the next generation of digital builders through high-quality, accessible education in engineering, design, and business.</p>
+<div class="flex gap-4">
+<a class="size-10 bg-navy-accent rounded-lg flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="size-10 bg-navy-accent rounded-lg flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Platform</h5>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary" href="#">Courses</a></li>
+<li><a class="hover:text-primary" href="#">Learning Paths</a></li>
+<li><a class="hover:text-primary" href="#">Certifications</a></li>
+<li><a class="hover:text-primary" href="#">For Teams</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Community</h5>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary" href="#">Blog</a></li>
+<li><a class="hover:text-primary" href="#">Forum</a></li>
+<li><a class="hover:text-primary" href="#">Events</a></li>
+<li><a class="hover:text-primary" href="#">Mentorship</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Company</h5>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary" href="#">About Us</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Partners</a></li>
+<li><a class="hover:text-primary" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Legal</h5>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary" href="#">Privacy</a></li>
+<li><a class="hover:text-primary" href="#">Terms</a></li>
+<li><a class="hover:text-primary" href="#">Cookies</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 text-xs">© 2024 DevQuest EdTech Platform. All rights reserved.</p>
+<div class="flex items-center gap-6 text-slate-500 text-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">language</span> English</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">bolt</span> Powered by Innovation</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

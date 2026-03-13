@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #97ca3f;
+  --color-background-light: #f7f8f6;
+  --color-background-dark: #121f3d;
+  --color-navy-accent: #1e2d52;
+  
+  --font-display: "Lexend", sans-serif;
+  
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+:root {
+  font-family: 'Lexend', sans-serif;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+}
+
+body {
+  @apply bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased;
+}
+
+.neon-glow {
+  @apply shadow-[0_0_15px_rgba(151,202,63,0.15)];
+}
+
+.neon-glow:hover {
+  @apply shadow-[0_0_25px_rgba(151,202,63,0.3)];
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, #1e2d52 0%, #121f3d 100%);
+}
