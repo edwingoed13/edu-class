@@ -156,8 +156,11 @@
 
 <script setup>
 import { ref, onMounted, computed, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { supabase } from '../lib/supabase'
 import GoogleDrivePlayer from '../components/GoogleDrivePlayer.vue'
+
+const route = useRoute()
 
 const currentCourse = ref(null)
 const currentLesson = ref(null)
@@ -264,11 +267,21 @@ const saveNote = async () => {
 }
 
 const fetchCourseData = async () => {
-  const { data: course } = await supabase
-    .from('courses')
-    .select('*')
-    .eq('title', 'VUE de 0 a Experto + Firebase')
-    .single()
+  // Aquí usamos el ID del curso pasado por la URL (?courseId=...)
+  // Si no se pasa ninguno, por defecto buscamos el de Vue para mantener compatibilidad con lo anterior.
+  const courseId = route.query.courseId
+
+  let query = supabase.from('courses').select('*')
+  
+  if (courseId && courseId !== 'vue-course') {
+    // Si tienes UUIDs en Supabase, asegúrate de que esto encaje con tu esquema
+    query = query.eq('id', courseId)
+  } else {
+    // Fallback hacia el curso que ya tenías quemado
+    query = query.eq('title', 'VUE de 0 a Experto + Firebase')
+  }
+
+  const { data: course } = await query.single()
 
   if (course) {
     currentCourse.value = course

@@ -66,7 +66,12 @@
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div v-for="course in filteredCourses" :key="course.id" class="card-gradient rounded-xl overflow-hidden border border-slate-800 neon-glow transition-all group cursor-pointer" @click="goToLesson">
+            <div v-if="loading" class="col-span-full text-center py-12">
+              <span class="material-symbols-outlined text-4xl text-primary animate-spin">progress_activity</span>
+              <p class="text-slate-400 mt-4">Cargando catálogo...</p>
+            </div>
+            
+            <div v-else v-for="course in filteredCourses" :key="course.id" class="card-gradient rounded-xl overflow-hidden border border-slate-800 neon-glow transition-all group cursor-pointer" @click="goToLesson(course.id)">
               <div class="aspect-video relative overflow-hidden">
                 <img :src="course.image" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" :alt="course.title"/>
                 <div class="absolute top-2 right-2 bg-background-dark/80 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-primary uppercase">{{ course.level }}</div>
@@ -103,64 +108,44 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { supabase } from '../lib/supabase'
 
 const router = useRouter()
 const searchQuery = ref('')
 
-const goToLesson = () => {
-  router.push('/lesson')
+const goToLesson = (id) => {
+  // If we had dynamic routes: router.push(`/lesson/${id}`)
+  // For now we just push to /lesson, ideally pass it via query or params
+  router.push({ path: '/lesson', query: { courseId: id } })
 }
 
 const categories = ['Web Development', 'Data Science', 'UI/UX Design', 'DevOps', 'Cybersecurity', 'Mobile Development', 'AI & Machine Learning']
 const levels = ['Beginner', 'Intermediate', 'Expert']
 
-const allCourses = [
-  {
-    id: 1,
-    title: 'Professional React 18 & Next.js',
-    category: 'Web Development',
-    level: 'Expert',
-    duration: '24h',
-    students: '12.5k',
-    price: '$24.99',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBWXTDEOUVj1cbdodTYGydFX8B0yd1VqbSYy_pJh045XsRuhK5h-jndXc8Se8K_aPe9dG3bich66ueRzJHvmqKCI4TTIVObvLxl65jnL3xKNprv02r6VFWY2IgqoFCMmnW8u-L0Me-40uQL3J4wjpQhGpxyQ1S2dxtO2dYlGY-a09EIHBWs3bdQtsoNufP0Ma-qQ_9OTOtKXZZbjFfIOoxsHM7UUY7ziC9EctkacT0725zNmVhNrRv2ztIWlyWrFHNPl7pLd_e1DkM'
-  },
-  {
-    id: 2,
-    title: 'Python for Data Engineering',
-    category: 'Data Science',
-    level: 'Beginner',
-    duration: '32h',
-    students: '8.2k',
-    price: 'Free',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDyC8YaLsA7AM9IPhH1QP6IKATBkesHoQtrMRGnrns1KTT5KeqLR_cYd_s37r60RF9VrYjZf_jWn52TKg1P3gp_qP5RM6DN9uXVfqtyIKANOEua2gDhi6UvuQcllKv9kfr166ZDGfMJpqakAB3vuBTZxc3gRsvNSMfh9kM5VKiGvuSny2VwtMh_KKIcQHLxtiBntA8AYc8UWrNYdVbEnwbW_fU0F0wj2InTxHBWNel_7U2KdEOqWwfTLo7KjkvYswH9WwtpRPxxYRc'
-  },
-  {
-    id: 3,
-    title: 'Advanced UI/UX Systems',
-    category: 'Design',
-    level: 'Intermediate',
-    duration: '18h',
-    students: '4.1k',
-    price: '$19.99',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDxd-PmBvsps9mvqB4JmUfJ6K894J_9Aaj14Qt64HBv_U_mAa2qLf6yaJasw8v4vroh8hkjifG-A1TGiLBP3bs3jsrXZMwYhQjd4X2x3buJ6w4vwr25RY3no7ENmHr7rf0SiOF4gdaZ7-4h-cUTqobMk1CYL1Vi021gozu6xRqVwch4G-4ml0d2UyNDmYeS67M6fUDBMUKRstoz5UBaNsLlR8wxC4CBFEkct2a7x6QBzGlwTJkIPHg5PSCjqb-FnHJXmQ--BfLhtsU'
-  },
-  {
-    id: 4,
-    title: 'Kubernetes in Production',
-    category: 'DevOps',
-    level: 'Expert',
-    duration: '40h',
-    students: '2.9k',
-    price: '$34.99',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA-wJDNHhqzLrX86_A3adSHNm1DLBvaz5Dsit5Cvk_99W3mzyhN9dlOuRSRHoxHg87EWieyIYcnxlDmpgh6E9Ajdo9KGSYNm-x9oK6XeUwMh7srN6NQhubtMavHdiCQW1OhjZd8iStOGwQ1KN3IezgB5qmji7BFqJCdbq-E9LFOhRGYeVOQJAkMLnH1jEYgQdU9aBJoLwnNzMXhDa-mRJAY0n0UdUxs4bwWo3zSmwdl0cKMSqoacQmF9ALSBI0yvp0-9N2Xa4ujZog'
+const allCourses = ref([])
+const loading = ref(true)
+
+onMounted(async () => {
+  const { data, error } = await supabase.from('courses').select('*')
+  if (data) {
+    // Si la DB aún no tiene estos campos, agregamos unos por defecto visuales
+    allCourses.value = data.map(course => ({
+      ...course,
+      image: course.image_url || 'https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg',
+      level: course.level || 'Principiante',
+      category: course.category || 'Desarrollo',
+      duration: course.duration || '15h',
+      students: course.students || '+1k',
+      price: course.price || 'Gratis'
+    }))
   }
-]
+  loading.value = false
+})
 
 const filteredCourses = computed(() => {
-  if (!searchQuery.value) return allCourses
-  return allCourses.filter(c => c.title.toLowerCase().includes(searchQuery.value.toLowerCase()))
+  if (!searchQuery.value) return allCourses.value
+  return allCourses.value.filter(c => c.title.toLowerCase().includes(searchQuery.value.toLowerCase()))
 })
 </script>
