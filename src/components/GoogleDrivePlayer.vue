@@ -1,25 +1,26 @@
+```
 <template>
-  <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-slate-700 shadow-2xl group">
+  <div class="relative w-full h-full group bg-black overflow-hidden flex flex-col">
+
+
     <iframe
       v-if="videoId"
-      :src="`https://docs.google.com/get_video_info?docid=${videoId}`"
+      :src="`https://drive.google.com/file/d/${videoId}/preview`"
       class="w-full h-full border-none"
       allow="autoplay; encrypted-media"
       allowfullscreen
     ></iframe>
-    <!-- Fallback if no videoId or Drive iframe doesn't work directly -->
-    <iframe
-      v-else-if="fallbackUrl"
-      :src="fallbackUrl"
-      class="w-full h-full border-none"
-      allow="autoplay"
-    ></iframe>
-    <div v-else class="flex items-center justify-center h-full bg-navy-accent/50 text-slate-500">
-      <span class="material-symbols-outlined text-6xl">play_circle</span>
-      <p class="ml-4 font-medium">Select a lesson to start watching</p>
+
+
+    <div v-else class="flex flex-col items-center justify-center h-full text-slate-500">
+      <span class="material-symbols-outlined text-6xl mb-4">play_circle</span>
+      <p class="font-medium">Seleccione una lección para comenzar</p>
     </div>
   </div>
 </template>
+
+
+
 
 <script setup>
 import { computed } from 'vue'

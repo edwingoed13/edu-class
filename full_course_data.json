@@ -1,0 +1,20 @@
+
+[
+  {"section": "01 Introducción", "title": "001 Presentación al curso Vue - Vuex - VueRouter - Firebase.mp4", "drive_id": "1SzVIXEpssm7ADhSb4OdVtJg666Eiav-E", "url": "https://drive.google.com/file/d/1SzVIXEpssm7ADhSb4OdVtJg666Eiav-E/preview"},
+  {"section": "02 ¡Importante! por favor ver este video _)", "title": "001 Actualización del curso de Vue 2 a Vue 3.mp4", "drive_id": "1LRztr8nOtGVxNq7RCAz_iO6SSNIepmWD", "url": "https://drive.google.com/file/d/1LRztr8nOtGVxNq7RCAz_iO6SSNIepmWD/preview"},
+  {"section": "03 Fundamentos de Javascript (sección opcional)", "title": "001 Introducción a Fundamentos de Javascript.mp4", "drive_id": "1nyd2iSm8i0EToXFK0SpGT5-V9I2GsUsD", "url": "https://drive.google.com/file/d/1nyd2iSm8i0EToXFK0SpGT5-V9I2GsUsD/preview"},
+  {"section": "03 Fundamentos de Javascript (sección opcional)", "title": "002 Var vs Let vs Const.mp4", "drive_id": "1BR1T7KsFjGOs5JJ2vszesT6e3rRG2NS6", "url": "https://drive.google.com/file/d/1BR1T7KsFjGOs5JJ2vszesT6e3rRG2NS6/preview"},
+  {"section": "03 Fundamentos de Javascript (sección opcional)", "title": "003 Funciones de Flecha (Arrow Functions).mp4", "drive_id": "1yw1sVgcVkGbtBfLgMXe-sD5KAU27mY2h", "url": "https://drive.google.com/file/d/1yw1sVgcVkGbtBfLgMXe-sD5KAU27mY2h/preview"},
+  {"section": "03 Fundamentos de Javascript (sección opcional)", "title": "004 Template String.mp4", "drive_id": "1Wdbwo3Swv0F-PZpzH7IlrMAFLD9vpFIO", "url": "https://drive.google.com/file/d/1Wdbwo3Swv0F-PZpzH7IlrMAFLD9vpFIO/preview"},
+  {"section": "03 Fundamentos de Javascript (sección opcional)", "title": "005 Objetos.mp4", "drive_id": "1ondjM7tysizpDW0rCFk_Tvg1BnPQM21_", "url": "https://drive.google.com/file/d/1ondjM7tysizpDW0rCFk_Tvg1BnPQM21_/preview"},
+  {"section": "03 Fundamentos de Javascript (sección opcional)", "title": "006 Destructuring JavaScript Objects.mp4", "drive_id": "1gGOi0Q4GZclQOPiXGI8toRqHGTk2kWKm", "url": "https://drive.google.com/file/d/1gGOi0Q4GZclQOPiXGI8toRqHGTk2kWKm/preview"},
+  {"section": "03 Fundamentos de Javascript (sección opcional)", "title": "007 Practicando con Objetos.mp4", "drive_id": "1FrPqPVMU2xaAi4ZJ5nhv6B7CAMo4XKm_", "url": "https://drive.google.com/file/d/1FrPqPVMU2xaAi4ZJ5nhv6B7CAMo4XKm_/preview"},
+  {"section": "03 Fundamentos de Javascript (sección opcional)", "title": "008 Fetch API.mp4", "drive_id": "1E6lemjJRLRgwl3sgfdXFdVeSvgduZBmf", "url": "https://drive.google.com/file/d/1E6lemjJRLRgwl3sgfdXFdVeSvgduZBmf/preview"},
+  {"section": "03 Fundamentos de Javascript (sección opcional)", "title": "009 Async Await.mp4", "drive_id": "10_HgnNXOqvNG5tAarVzgs1GQsJQX-XHF", "url": "https://drive.google.com/file/d/10_HgnNXOqvNG5tAarVzgs1GQsJQX-XHF/preview"},
+  {"section": "03 Fundamentos de Javascript (sección opcional)", "title": "010 Map.mp4", "drive_id": "1aYgYIHlna2tmBoAZuPhOi1UQC-6MmNa4", "url": "https://drive.google.com/file/d/1aYgYIHlna2tmBoAZuPhOi1UQC-6MmNa4/preview"},
+  {"section": "03 Fundamentos de Javascript (sección opcional)", "title": "011 Filter.mp4", "drive_id": "1v3OrEM08P8rpTSbwNViAOs_KMQyhKX0V", "url": "https://drive.google.com/file/d/1v3OrEM08P8rpTSbwNViAOs_KMQyhKX0V/preview"},
+  {"section": "04 VUE JS 3! - Fundamentos", "title": "017 Props - Comunicación entre componentes.mp4", "drive_id": "1FsF8o_WM9t3J-Ja_jpQwRU4N0TyN2bLO", "url": "https://drive.google.com/file/d/1FsF8o_WM9t3J-Ja_jpQwRU4N0TyN2bLO/preview"},
+  {"section": "04 VUE JS 3! - Fundamentos", "title": "018 Props dinámicos.mp4", "drive_id": "16e1J6TrU01PbncrbFZxnh7EoKmLjgQBA", "url": "https://drive.google.com/file/d/16e1J6TrU01PbncrbFZxnh7EoKmLjgQBA/preview"},
+  {"section": "05 VUE CLI 4 - Acelerando el desarrollo web", "title": "001 Mi primer proyecto con Vue Cli.mp4", "drive_id": "1jG3fR0ellkLR4yac2KJHw9COvgQw7nEl", "url": "https://drive.google.com/file/d/1jG3fR0ellkLR4yac2KJHw9COvgQw7nEl/preview"},
+  {"section": "35 [Vue.js 2] Paginación con Node.js + MongoDB + Vue + Bootstrap 4", "title": "001 Paginado con Mongoose.mp4", "drive_id": "1YQ_WIZDHzgbZ7x8cOdjPCbCINvC-yVcZ", "url": "https://drive.google.com/file/d/1YQ_WIZDHzgbZ7x8cOdjPCbCINvC-yVcZ/preview"}
+]
